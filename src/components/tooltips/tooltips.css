@@ -1,0 +1,143 @@
+[data-tooltip] {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+
+  &::before, &::after {
+    bottom: 350%;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translate(-50%, 0);
+    transform-origin: top;
+    transition: all 0.4s;
+  }
+
+  &::before {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 5px;
+    padding: 10px 20px;
+    width: 80px;
+    content: attr(data-tooltip);
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #000;
+  }
+
+  /* Triangle */
+  &::after {
+    position: absolute;
+    left: 50%;
+    width: 15px;
+    height: 6px;
+    content: "";
+    background: #000;
+    clip-path: polygon(100% 0, 0 0, 50% 100%);
+  }
+
+  &:hover::before, &:hover::after {
+    bottom: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+[data-tooltip-size="small"] {
+  &::before {
+    width: 80px;
+  }
+}
+
+[data-tooltip-size="medium"] {
+  &::before {
+    width: 110px;
+  }
+}
+
+[data-tooltip-size="large"] {
+  &::before {
+    width: 135px;
+  }
+}
+
+[data-tooltip-size="xlarge"] {
+  &::before {
+    width: 155px;
+  }
+}
+
+[data-tooltip-type="success"] {
+  &::before, &::after {
+    background: #acca32;
+  }
+}
+
+[data-tooltip-type="alert"] {
+  &::before, &::after {
+    background: #cc0000;
+  }
+}
+
+[data-tooltip-type="warning"] {
+  &::before, &::after {
+    background: #fcc721;
+  }
+}
+
+[data-tooltip-type="info"] {
+  &::before, &::after {
+    background: #23a38f;
+  }
+}
+
+[data-tooltip-position="right"] {
+  &::before, &::after {
+    margin: 0 0 0 11px;
+    top: 50%;
+    bottom: auto;
+    left: 150%;
+    transform: translate(0, -50%);
+  }
+
+  &::after {
+    margin: 0 0 0 7px;
+    width: 6px;
+    height: 15px;
+    clip-path: polygon(100% 0, 0 50%, 100% 100%);
+  }
+
+  &:hover::before, &:hover::after {
+    bottom: auto;
+    left: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+[data-tooltip-position="left"] {
+  &::before, &::after {
+    margin: 0 11px 0 0;
+    top: 50%;
+    bottom: auto;
+    right: 150%;
+    left: auto;
+    transform: translate(0, -50%);
+  }
+
+  &::after {
+    margin: 0 7px 0 0;
+    width: 6px;
+    height: 15px;
+    clip-path: polygon(0 0, 100% 50%, 0 100%);
+  }
+
+  &:hover::before, &:hover::after {
+    bottom: auto;
+    right: 100%;
+    visibility: visible;
+    opacity: 1;
+  }
+}
