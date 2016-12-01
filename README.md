@@ -3,6 +3,27 @@
 
 `jubilee` is a collection of reusable front-end components from Monkee-Boy.
 
+## Get It
+
+**[Bower](http://bower.io/)**
+```shell
+bower install jubilee
+```
+
+**[npm](http://npmjs.com/)**
+```shell
+npm install --save-dev mb-jubilee
+```
+
+**Git**
+```shell
+git clone git://github.com/Monkee-Boy/jubilee.git
+```
+
+## Use It
+
+...
+
 ## The Dev Team
 
 Handcrafted with ♥ in Austin, Texas by the [Monkee-Boy Troop](https://www.monkee-boy.com/who/the-troop/).
