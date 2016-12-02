@@ -24,25 +24,34 @@ var config = require('./gulp/config.json'),
     imagemin = require('gulp-imagemin'),
     babel = require('gulp-babel');
 
-gulp.task('default', ['css']);
+var postcss_processors = [
+  atImport(),
+  conditionals(),
+  postcssfor(),
+  postcsseach(),
+  mixins(),
+  compactmq(),
+  nested(),
+  calc(),
+  simpleVars(),
+  autoprefixer(config.autoprefixer),
+  cssnano()
+];
 
-gulp.task('css', function () {
-  var processors = [
-    atImport(),
-    conditionals(),
-    postcssfor(),
-    postcsseach(),
-    mixins(),
-    compactmq(),
-    nested(),
-    calc(),
-    simpleVars(),
-    autoprefixer(config.autoprefixer),
-    cssnano()
-  ];
+gulp.task('default', ['tooltips', 'utilities'], function() {
+  return;
+});
 
-  return gulp.src(files.globs.css.src)
-    .pipe(postcss(processors))
+gulp.task('tooltips', function () {
+  return gulp.src(files.globs.tooltips.src)
+    .pipe(postcss(postcss_processors))
+    .pipe(gulp.dest(files.paths.dist))
+    .pipe(sizereport());
+});
+
+gulp.task('utilities', function () {
+  return gulp.src(files.globs.utilities.src)
+    .pipe(postcss(postcss_processors))
     .pipe(gulp.dest(files.paths.dist))
     .pipe(sizereport());
 });

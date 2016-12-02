@@ -1,0 +1,24 @@
+.float-left, [data-float="left"] {
+  float: left !important;
+}
+
+.float-right, [data-float="right"] {
+  float: right !important;
+}
+
+.float-center, [data-float="center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clearfix {
+  &::before, &::after {
+    display: table;
+    content: " ";
+  }
+
+  &::after {
+    clear: both;
+  }
+}

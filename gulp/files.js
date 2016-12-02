@@ -5,9 +5,14 @@ var paths = {
 }
 
 var globs = {
-  css: {
+  tooltips: {
     src: [
-      paths.src + '**/*.css'
+      paths.src + 'components/tooltips/tooltips.css'
+    ]
+  },
+  utilities: {
+    src: [
+      paths.src + 'utilities/utilities.css'
     ]
   }
 };
