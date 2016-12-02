@@ -5,7 +5,7 @@
 
 ## Get It
 
-**[Bower](http://bower.io/)**
+**[Bower](http://bower.io/) (recommended)**
 ```shell
 bower install jubilee
 ```
@@ -22,7 +22,7 @@ git clone git://github.com/Monkee-Boy/jubilee.git
 
 ## Use It
 
-...
+It is recommended that you include only what you need vs the entire framework. Refer to the `usage.md` inside each component for specific information and customization options. Compiled and minified files are in `./dist`; these are ready to be imported into your project.
 
 ## The Dev Team
 
