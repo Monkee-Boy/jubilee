@@ -1,0 +1,26 @@
+{
+  "name": "jubilee",
+  "description": "A collection of reusable front-end components from Monkee-Boy.",
+  "main": "dist/jubilee.css",
+  "version": "1.0.0",
+  "homepage": "http://jubilee.monkee-boy.com",
+  "authors": [
+    "Monkee-Boy <dev@monkee-boy.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {},
+  "ignore": [
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "keywords": [
+    "front-end",
+    "css",
+    "components",
+    "monkee-boy",
+    "widgets",
+    "toolbars"
+  ]
+}
