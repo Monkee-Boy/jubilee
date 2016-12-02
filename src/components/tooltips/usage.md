@@ -62,5 +62,6 @@ The following data attributes can be used to customize the tooltip.
 * `medium`
 * `large`
 * `xlarge`
+* `fit`
 
-`<a href="#" data-tooltip="Lorem Ipsum" data-tooltip-size="small">Hover for small tooltip.</a>`
+`<a href="#" data-tooltip="Lorem Ipsum" data-tooltip-size="medium">Hover for small tooltip.</a>`

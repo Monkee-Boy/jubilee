@@ -69,6 +69,12 @@
   }
 }
 
+[data-tooltip-size="fit"] {
+  &::before {
+    width: 100%;
+  }
+}
+
 [data-tooltip-type="success"] {
   &::before, &::after {
     background: #acca32;
