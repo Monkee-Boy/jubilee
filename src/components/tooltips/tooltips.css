@@ -39,9 +39,17 @@
   }
 
   &:hover::before, &:hover::after {
-    bottom: 100%;
     visibility: visible;
     opacity: 1;
+    bottom: 100%;
+  }
+}
+
+[data-balloon-visible] {
+  &::before, &::after {
+    visibility: visible;
+    opacity: 1;
+    bottom: 100%;
   }
 }
 

@@ -37,6 +37,12 @@ To customize the text and background color of each type use (replacing `success`
 
 The following data attributes can be used to customize the tooltip.
 
+### Visible
+
+When you want the tooltip to show on load or trigger it using JavaScript you can add/toggle `data-tooltip-visible`. This will work with any `type` or `size` option below however currently it only works with `position` top.
+
+`<a href="#" data-tooltip="Lorem Ipsum" data-tooltip-visible>Tooltip displays on load.</a>`
+
 ### Type
 
 * `null` (default)
@@ -64,4 +70,4 @@ The following data attributes can be used to customize the tooltip.
 * `xlarge`
 * `fit`
 
-`<a href="#" data-tooltip="Lorem Ipsum" data-tooltip-size="medium">Hover for small tooltip.</a>`
+`<a href="#" data-tooltip="Lorem Ipsum" data-tooltip-size="medium">Hover for medium tooltip.</a>`
