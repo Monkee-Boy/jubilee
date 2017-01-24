@@ -5,16 +5,20 @@ var paths = {
 }
 
 var globs = {
+  jshint: '.jshintrc',
   tooltips: {
-    src: [
+    path: 'tooltips/',
+    css: [
       paths.src + 'components/tooltips/tooltips.css'
     ]
   },
+
   utilities: {
-    src: [
+    path: 'utilities/',
+    css: [
       paths.src + 'utilities/utilities.css'
     ]
-  }
+  },
 };
 
 module.exports = {

@@ -1,6 +1,6 @@
 {
   "name": "mb-jubilee",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A collection of reusable front-end components from Monkee-Boy.",
   "repository": {
     "type": "git",
@@ -41,6 +41,7 @@
     "gulp-jshint": "^2.0.1",
     "gulp-rename": "^1.2.2",
     "gulp-sizereport": "^1.2.0",
+    "gulp-sourcemaps": "^1.6.0",
     "gulp-stylelint": "^3.1.0",
     "gulp-uglify": "^2.0.0",
     "gulp-postcss": "^6.1.1",

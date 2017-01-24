@@ -4,7 +4,7 @@ These are generic utility/helper classes primarily meant to make it easy to do s
 
 ## Usage
 
-`@import "/bower_components/jubilee/dist/utilities.css";`
+`@import "/bower_components/jubilee/dist/utilities/utilities.css";`
 
 ## Customize
 
