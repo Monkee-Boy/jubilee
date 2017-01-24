@@ -4,6 +4,7 @@ var config = require('./gulp/config.json'),
     postcss = require('gulp-postcss'),
     autoprefixer = require('autoprefixer'),
     cssnano = require('cssnano'),
+    sourcemaps = require('gulp-sourcemaps'),
     atImport = require('postcss-import'),
     mixins = require('postcss-mixins'),
     conditionals = require('postcss-conditionals'),
@@ -43,9 +44,9 @@ gulp.task('default', ['tooltips', 'tabs', 'utilities'], function() {
 });
 
 gulp.task('tooltips', function () {
-  return gulp.src(files.globs.tooltips.src)
+  return gulp.src(files.globs.tooltips.css)
     .pipe(postcss(postcss_processors))
-    .pipe(gulp.dest(files.paths.dist))
+    .pipe(gulp.dest(files.paths.dist + files.globs.tooltips.path))
     .pipe(sizereport());
 });
 
@@ -57,8 +58,8 @@ gulp.task('tabs', function () {
 });
 
 gulp.task('utilities', function () {
-  return gulp.src(files.globs.utilities.src)
+  return gulp.src(files.globs.utilities.css)
     .pipe(postcss(postcss_processors))
-    .pipe(gulp.dest(files.paths.dist))
+    .pipe(gulp.dest(files.paths.dist + files.globs.utilities.path))
     .pipe(sizereport());
 });

@@ -5,21 +5,26 @@ var paths = {
 }
 
 var globs = {
+  jshint: '.jshintrc',
   tooltips: {
-    src: [
+    path: 'tooltips/',
+    css: [
       paths.src + 'components/tooltips/tooltips.css'
     ]
   },
+
   tabs: {
     src: [
       paths.src + 'components/tabs/tabs.css'
     ]
   },
+
   utilities: {
-    src: [
+    path: 'utilities/',
+    css: [
       paths.src + 'utilities/utilities.css'
     ]
-  }
+  },
 };
 
 module.exports = {
