@@ -34,7 +34,7 @@ var postcss_processors = [
   compactmq(),
   nested(),
   calc(),
-  simpleVars(),
+  simpleVars(config.simpleVars),
   autoprefixer(config.autoprefixer),
   cssnano()
 ];

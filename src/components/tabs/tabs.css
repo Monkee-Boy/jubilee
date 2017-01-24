@@ -1,8 +1,9 @@
+$tab_breakpoint: 1200px;
+
 #tabs {
   margin: 40px auto;
   padding: 0 0 15px;
   float: none;
-  width: 500px;
   text-align: justify;
 
   &:after {
@@ -11,7 +12,7 @@
     display: inline-block;
   }
 
-  > li {
+  > li {                             /* #tabs > li */
     padding: 15px 0;
     display: inline-block;
     list-style: none;
@@ -22,28 +23,8 @@
 
     &.active {
       border-top: 2px solid red;
-    }
 
-    &:first-of-type {
-      padding-left: 0;
-    }
-
-    &:last-of-type {
-      padding-right: 0;
-    }
-
-    p {
-      position: relative;
-      display: inline-block;
-      margin: 10px 0 -5px;
-      padding: 0 15px 15px;
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 18px;
-      color: gray;
-      text-align: initial;
-
-      &.active {
+      p.tab-title {                  /* #tabs > li p.tab-title */
         position: relative;
         margin-bottom: 0;
         color: #7d7b7b;
@@ -76,8 +57,29 @@
         }
       }
     }
+
+    &:first-of-type {
+      padding-left: 0;
+    }
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+
+    p {                              /* #tabs > li p  */
+      position: relative;
+      display: inline-block;
+      margin: 10px 0 -5px;
+      padding: 0 15px 15px;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px;
+      color: gray;
+      text-align: initial;
+    }
   }
-  section {
+
+  section {                          /* #tabs section */
     padding: 0 15px;
     overflow: hidden;
     max-height: 0;
@@ -96,7 +98,7 @@
       -webkit-transition: opacity .6s ease-out;
     }
 
-    h3 {
+    h3 {                             /* #tabs section h3 */
       margin-bottom: 15px;
       display: block;
       color: gray;
@@ -104,7 +106,7 @@
       text-transform: none;
      }
 
-    p {
+    p {                              /* #tabs section p */
       margin: 0;
       padding-left: 0;
       color: gray;
@@ -118,19 +120,19 @@
       }
     }
 
-    ul {
+    ul {                             /* #tabs section ul */
       list-style-type: disc;
-    }
 
-    li {
-      margin: 0;
-      width: 100%;
-      display: list-item;
+      li {                           /* #tabs section ul li */
+        margin: 0;
+        width: 100%;
+        display: list-item;
+      }
     }
   }
 }
 
-@media (min-width: 1200px) {
+  @media (min-width: @if $tab_breakpoint {$tab_breakpoint} @else {900px}) {
   #tabs {
     margin-top: 60px;
 
@@ -142,15 +144,8 @@
 
       &.active {
         border-top: none;
-      }
 
-      p {
-        margin: 1em 0;
-        padding-left: 0;
-        padding-right: 0;
-        font-size: 13px;
-
-        &.active {
+        p.tab-title {
           padding-bottom: 16px;
           color: red;
           border-bottom: 2px solid red;
@@ -159,6 +154,13 @@
             display: block;
           }
         }
+      }
+
+      p {
+        margin: 1em 0;
+        padding-left: 0;
+        padding-right: 0;
+        font-size: 13px;
       }
 
       section {

@@ -7,5 +7,6 @@
   },
   "uglify": { "preserveComments": "some" },
   "jshint_reporter": "jshint-stylish",
-  "babel": { "presets": ["es2015"] }
+  "babel": { "presets": ["es2015"] },
+  "simpleVars" : { "silent": true }
 }
