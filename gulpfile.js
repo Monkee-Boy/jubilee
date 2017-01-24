@@ -50,10 +50,29 @@ gulp.task('tooltips', function () {
     .pipe(sizereport());
 });
 
-gulp.task('tabs', function () {
-  return gulp.src(files.globs.tabs.src)
+gulp.task('tabs', ['tabs_css', 'tabs_js'], function () {
+  return;
+});
+
+gulp.task('tabs_css', function () {
+  return gulp.src(files.globs.tabs.css)
     .pipe(postcss(postcss_processors))
-    .pipe(gulp.dest(files.paths.dist))
+    .pipe(gulp.dest(files.paths.dist + files.globs.tabs.path))
+    .pipe(sizereport());
+});
+
+gulp.task('tabs_js', function () {
+  return gulp.src(files.globs.tabs.js)
+    .pipe(jshint(files.paths.jshint + files.globs.jshint))
+    .pipe(jshint.reporter(config.jshint_reporter))
+    .pipe(sourcemaps.init())
+    .pipe(babel(config.babel))
+    .pipe(concat(files.globs.tabs.js_compiled))
+    .pipe(gulp.dest(files.paths.dist + files.globs.tabs.path))
+    .pipe(rename({ suffix: ".minified" }))
+    .pipe(uglify(config.uglify))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest(files.paths.dist + files.globs.tabs.path))
     .pipe(sizereport());
 });
 
