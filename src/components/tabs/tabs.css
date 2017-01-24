@@ -132,7 +132,8 @@ $tab_breakpoint: 1200px;
   }
 }
 
-  @media (min-width: @if $tab_breakpoint {$tab_breakpoint} @else {900px}) {
+
+@media (min-width: @if $tab_breakpoint {$tab_breakpoint} @else {900px}) {
   #tabs {
     margin-top: 60px;
 
