@@ -136,7 +136,7 @@
     #tabs {
       margin-top: 60px;
 
-      > li {
+      > li {                           /* #tabs > li */
         display: inline;
         margin-bottom:  40px;
         border-top: none;
@@ -145,7 +145,7 @@
         &.active {
           border-top: none;
 
-          p.tab-title {
+          p.tab-title {                /* #tabs > li p.tab-title */
             padding-bottom: 16px;
             color: red;
             border-bottom: 2px solid red;
@@ -156,14 +156,14 @@
           }
         }
 
-        p {
+        p {                            /* #tabs > li p  */
           margin: 1em 0;
           padding-left: 0;
           padding-right: 0;
           font-size: 13px;
         }
 
-        section {
+        section {                      /* #tabs section */
           float: left;
 
           &.is-open {
