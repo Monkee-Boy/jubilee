@@ -13,12 +13,12 @@
     tabList.forEach(function (element) {
       element.classList.remove('active');
       element.children[0].classList.remove('active');
-      element.children[1].classList.remove('is-open');
+      element.children[1].classList.remove('is-current');
     });
 
     this.classList.add('active');
     this.children[0].classList.add('active');
-    this.children[1].classList.add('is-open');
+    this.children[1].classList.add('is-current');
   };
 
   var _iteratorNormalCompletion = true;
