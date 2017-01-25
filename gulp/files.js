@@ -21,7 +21,7 @@ var globs = {
     js: [
       paths.src + 'components/tabs/tabs.js'
     ],
-    js_compiled: 'tabs.compiled.js'
+    js_compiled: 'tabs.js'
   },
 
   utilities: {

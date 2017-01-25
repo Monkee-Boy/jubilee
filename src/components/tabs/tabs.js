@@ -1,26 +1,26 @@
 (function() {
   'use strict';
 
-  const tabs = document.querySelector('#tabs');
-  const tabList = tabs.querySelectorAll('li.tab');
+  const tabs = document.querySelectorAll('.tabs');
 
-  // Change active tab on click
+  for (const tab of tabs) {
+    let tabList = tab.querySelectorAll('li.tab');
 
-  const makeActive = function() {
+    // Change active tab on click
+    const makeActive = function() {
+      for (const tabItem of tabList) {
+        tabItem.classList.remove('active');
+        tabItem.children[0].classList.remove('active');
+        tabItem.children[1].classList.remove('is-current');
+      };
 
-    tabList.forEach(function(element) {
-      element.classList.remove('active');
-      element.children[0].classList.remove('active');
-      element.children[1].classList.remove('is-current');
-    });
+      this.classList.add('active');
+      this.children[0].classList.add('active');
+      this.children[1].classList.add('is-current');
+    };
 
-    this.classList.add('active');
-    this.children[0].classList.add('active');
-    this.children[1].classList.add('is-current');
-  };
-
-  for (const tab of tabList) {
-    tab.addEventListener('click', makeActive);
+    for (const tabItem of tabList) {
+      tabItem.addEventListener('click', makeActive);
+    }
   }
-
 }());
