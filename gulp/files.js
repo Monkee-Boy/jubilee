@@ -13,6 +13,17 @@ var globs = {
     ]
   },
 
+  tabs: {
+    path: 'tabs/',
+    css: [
+      paths.src + 'components/tabs/tabs.css'
+    ],
+    js: [
+      paths.src + 'components/tabs/tabs.js'
+    ],
+    js_compiled: 'tabs.js'
+  },
+
   utilities: {
     path: 'utilities/',
     css: [
