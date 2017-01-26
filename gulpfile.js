@@ -56,7 +56,6 @@ gulp.task('tabs', ['tabs_css', 'tabs_js'], function () {
 
 gulp.task('tabs_css', function () {
   return gulp.src(files.globs.tabs.css)
-    .pipe(postcss(postcss_processors))
     .pipe(gulp.dest(files.paths.dist + files.globs.tabs.path))
     .pipe(sizereport());
 });
