@@ -9,7 +9,7 @@
     float: none;
     text-align: justify;
 
-    &:after {
+    &::after {
       content: '';
       width: 100%;
       display: inline-block;
@@ -32,7 +32,7 @@
           margin-bottom: 0;
           color: #7d7b7b;
 
-          &:after, &:before {
+          &::after, &::before {
             position: absolute;
             top: 100%;
             left: 50%;
@@ -44,7 +44,7 @@
             pointer-events: none;
           }
 
-          &:after {
+          &::after {
             top: 98%;
             margin-left: -6px;
             border-color: rgba(255, 255, 255, 0);
@@ -52,7 +52,7 @@
             border-width: 8px;
           }
 
-          &:before {
+          &::before {
             margin-left: -8px;
             border-color: rgba(230, 30, 42, 0);
             border-top-color: #cc0000;
@@ -154,7 +154,7 @@
             color: #cc0000;
             border-bottom: 2px solid #cc0000;
 
-            &:after, &:before {
+            &::after, &::before {
               display: block;
             }
           }
