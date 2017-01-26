@@ -2,7 +2,7 @@
   "name": "jubilee",
   "description": "A collection of reusable front-end components from Monkee-Boy.",
   "main": "dist/jubilee.css",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "homepage": "http://jubilee.monkee-boy.com",
   "authors": [
     "Monkee-Boy <dev@monkee-boy.com>"
