@@ -13,6 +13,13 @@ var globs = {
     ]
   },
 
+  faqs: {
+    path: 'faqs/',
+    css: [
+      paths.src + 'components/faqs/faqs.css'
+    ]
+  },
+
   tabs: {
     path: 'tabs/',
     css: [
