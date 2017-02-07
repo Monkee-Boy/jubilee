@@ -26,9 +26,6 @@
       display: block;
       width: 100%;
       cursor: pointer;
-      @include bp(981px) {
-        padding-right: 0;
-      }
 
       &::after {
         content: "+";
