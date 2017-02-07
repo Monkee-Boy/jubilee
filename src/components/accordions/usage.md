@@ -13,14 +13,14 @@ Default styles are included but you should override with styles that match the p
 
 ```
 /* Setting active border color. */
-.faqs > .faq-item {
+.accordion > .accordion-item {
   border-color: #00cc00;
 }
 ```
 
 ```
 /* Changing close FAQ symbol */
-.faqs > .faq-item input[type='checkbox']:checked + label::after {
+.accordion > .accordion-item input[type='checkbox']:checked + label::after {
   content: "x";
 }
 ```
