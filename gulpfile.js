@@ -39,7 +39,7 @@ var postcss_processors = [
   cssnano()
 ];
 
-gulp.task('default', ['tooltips', 'faqs', 'tabs', 'utilities'], function() {
+gulp.task('default', ['tooltips', 'accordions', 'tabs', 'utilities'], function() {
   return;
 });
 
@@ -50,10 +50,10 @@ gulp.task('tooltips', function () {
     .pipe(sizereport());
 });
 
-gulp.task('faqs', function () {
-  return gulp.src(files.globs.faqs.css)
+gulp.task('accordions', function () {
+  return gulp.src(files.globs.accordions.css)
     .pipe(postcss(postcss_processors))
-    .pipe(gulp.dest(files.paths.dist + files.globs.faqs.path))
+    .pipe(gulp.dest(files.paths.dist + files.globs.accordions.path))
     .pipe(sizereport());
 });
 

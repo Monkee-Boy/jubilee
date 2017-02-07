@@ -1,11 +1,11 @@
-# FAQs
+# Accordions
 
-FAQs are lists of questions and answers that relate to a particular subject. FAQs assume an accordion-style layout and multiple FAQ items can be opened at the same time.
+Accordions display collapsable content. They can be opened and closed by the user to display information.
 
 ## Usage
 
-* Import the CSS into your project -> `@import "/bower_components/jubilee/dist/faqs/faqs.css";`.
-* Reference `/bower_components/jubilee/src/components/faqs/faqs.html` for HTML structure.
+* Import the CSS into your project -> `@import "/bower_components/jubilee/dist/accordions/accordions.css";`.
+* Reference `/bower_components/jubilee/src/components/accordions/accordions.html` for HTML structure.
 
 ## Customize
 

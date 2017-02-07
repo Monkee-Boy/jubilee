@@ -13,10 +13,10 @@ var globs = {
     ]
   },
 
-  faqs: {
-    path: 'faqs/',
+  accordions: {
+    path: 'accordions/',
     css: [
-      paths.src + 'components/faqs/faqs.css'
+      paths.src + 'components/accordions/accordions.css'
     ]
   },
 

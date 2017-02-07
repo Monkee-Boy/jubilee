@@ -1,9 +1,9 @@
-.faqs {
-  .faq-item {                  /* .faqs .faq-item */
+.accordion {
+  .accordion-item {                  /* .accordion .accordion-item */
     padding: 20px;
     border: 1px solid gray;
 
-    input[type='checkbox'] {   /* .faqs .faq-item input[type=checkbox] */
+    input[type='checkbox'] {   /* .accordion .accordion-item input[type=checkbox] */
       position: absolute;
       opacity: 0;
 
@@ -21,7 +21,7 @@
       }
     }
 
-    label {                    /* .faqs label */
+    label {                    /* .accordion label */
       position: relative;
       display: block;
       width: 100%;
@@ -35,7 +35,7 @@
       }
     }
 
-    section {                  /* .faqs section */
+    section {                  /* .accordion section */
       position: relative;
       padding-left: 20px;
       padding-right: 20px;
@@ -50,7 +50,7 @@
         left: 0;
       }
 
-      p {                      /* .faqs section p */
+      p {                      /* .accordion section p */
         margin-bottom: 15px;
 
         &:last-of-type {
@@ -63,7 +63,7 @@
       }
     }
 
-    &:not(:last-of-type) {     /* .faqs .faq-item:not(:last-of-type) */
+    &:not(:last-of-type) {     /* .accordion .accordion-item:not(:last-of-type) */
       border-bottom: none;
     }
   }
