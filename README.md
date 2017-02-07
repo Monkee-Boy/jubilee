@@ -5,14 +5,14 @@
 
 ## Get It
 
-**[Bower](http://bower.io/) (recommended)**
-```shell
-bower install jubilee
-```
-
 **[npm](http://npmjs.com/)**
 ```shell
 npm install --save-dev mb-jubilee
+```
+
+**[Bower](http://bower.io/)**
+```shell
+bower install jubilee
 ```
 
 **Git**

@@ -19,7 +19,7 @@ Default styles are included but you should override with styles that match the p
 ```
 
 ```
-/* Changing close FAQ symbol */
+/* Changing close symbol */
 .accordion > .accordion-item input[type='checkbox']:checked + label::after {
   content: "x";
 }
