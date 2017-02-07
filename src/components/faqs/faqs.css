@@ -1,0 +1,70 @@
+.faqs {
+  .faq-item {                  /* .faqs .faq-item */
+    padding: 20px;
+    border: 1px solid gray;
+
+    input[type='checkbox'] {   /* .faqs .faq-item input[type=checkbox] */
+      position: absolute;
+      opacity: 0;
+
+      &:checked {
+        + label {
+          &::after {
+            content: "-";
+          }
+        }
+
+        ~ section {
+          max-height: 1000px;
+          transition: max-height 0.15s ease-in-out;
+        }
+      }
+    }
+
+    label {                    /* .faqs label */
+      position: relative;
+      display: block;
+      width: 100%;
+      cursor: pointer;
+
+      &::after {
+        content: "+";
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    section {                  /* .faqs section */
+      position: relative;
+      padding-left: 20px;
+      padding-right: 20px;
+      max-height: 0;
+      transition: max-height .15s ease-in-out;
+      overflow: hidden;
+
+      &::before {
+        content: "A:";
+        position: absolute;
+        top: 15px;
+        left: 0;
+      }
+
+      p {                      /* .faqs section p */
+        margin-bottom: 15px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &:empty {
+          display: none;
+        }
+      }
+    }
+
+    &:not(:last-of-type) {     /* .faqs .faq-item:not(:last-of-type) */
+      border-bottom: none;
+    }
+  }
+}

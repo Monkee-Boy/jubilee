@@ -39,7 +39,7 @@ var postcss_processors = [
   cssnano()
 ];
 
-gulp.task('default', ['tooltips', 'tabs', 'utilities'], function() {
+gulp.task('default', ['tooltips', 'faqs', 'tabs', 'utilities'], function() {
   return;
 });
 
@@ -47,6 +47,13 @@ gulp.task('tooltips', function () {
   return gulp.src(files.globs.tooltips.css)
     .pipe(postcss(postcss_processors))
     .pipe(gulp.dest(files.paths.dist + files.globs.tooltips.path))
+    .pipe(sizereport());
+});
+
+gulp.task('faqs', function () {
+  return gulp.src(files.globs.faqs.css)
+    .pipe(postcss(postcss_processors))
+    .pipe(gulp.dest(files.paths.dist + files.globs.faqs.path))
     .pipe(sizereport());
 });
 
