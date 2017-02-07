@@ -13,6 +13,13 @@ var globs = {
     ]
   },
 
+  accordions: {
+    path: 'accordions/',
+    css: [
+      paths.src + 'components/accordions/accordions.css'
+    ]
+  },
+
   tabs: {
     path: 'tabs/',
     css: [

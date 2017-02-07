@@ -39,7 +39,7 @@ var postcss_processors = [
   cssnano()
 ];
 
-gulp.task('default', ['tooltips', 'tabs', 'utilities'], function() {
+gulp.task('default', ['tooltips', 'accordions', 'tabs', 'utilities'], function() {
   return;
 });
 
@@ -47,6 +47,13 @@ gulp.task('tooltips', function () {
   return gulp.src(files.globs.tooltips.css)
     .pipe(postcss(postcss_processors))
     .pipe(gulp.dest(files.paths.dist + files.globs.tooltips.path))
+    .pipe(sizereport());
+});
+
+gulp.task('accordions', function () {
+  return gulp.src(files.globs.accordions.css)
+    .pipe(postcss(postcss_processors))
+    .pipe(gulp.dest(files.paths.dist + files.globs.accordions.path))
     .pipe(sizereport());
 });
 

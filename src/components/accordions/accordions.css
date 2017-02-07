@@ -1,0 +1,73 @@
+.accordion {
+  .accordion-item {                  /* .accordion .accordion-item */
+    border: 1px solid gray;
+
+    input[type='checkbox'] {   /* .accordion .accordion-item input[type=checkbox] */
+      position: absolute;
+      opacity: 0;
+
+      &:checked {
+        + label {
+          &::after {
+            content: "-";
+          }
+        }
+
+        ~ section {
+          max-height: 1000px;
+          transition: max-height 0.15s ease-in-out;
+        }
+      }
+    }
+
+    label {                    /* .accordion label */
+      position: relative;
+      padding: 20px;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+
+      &::after {
+        content: "+";
+      }
+    }
+
+    section {                  /* .accordion section */
+      position: relative;
+      top: -20px;
+      padding-left: 40px;
+      padding-right: 20px;
+      max-height: 0;
+      transition: max-height .15s ease-in-out;
+      overflow: hidden;
+
+      &::before {
+        content: "A:";
+        position: absolute;
+        top: 15px;
+        left: 20px;
+      }
+
+      p {                      /* .accordion section p */
+        margin-bottom: 15px;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        &:empty {
+          display: none;
+        }
+      }
+    }
+
+    &:not(:last-of-type) {     /* .accordion .accordion-item:not(:last-of-type) */
+      border-bottom: none;
+    }
+  }
+}
