@@ -4,9 +4,9 @@ Tabs are used to display blocks of content. These tabs assume an accordion-style
 
 ## Usage
 
-* Import the CSS into your project -> `@import "/bower_components/jubilee/dist/tabs/tabs.css";`.
-* Add the JS to your build process -> `/bower_components/jubilee/dist/tabs/tabs.minified.js`.
-* Reference `/bower_components/jubilee/src/components/tabs/tabs.html` for HTML structure.
+* Import the CSS into your project -> `@import "/node_modules/mb-jubilee/dist/tabs/tabs.css";`.
+* Add the JS to your build process -> `/node_modules/mb-jubilee/dist/tabs/tabs.minified.js`.
+* Reference `/node_modules/mb-jubilee/src/components/tabs/tabs.html` for HTML structure.
 
 The tab css is contained in a PostCSS mixin called tabs. The mixin has an optional min-width breakpoint argument. All screen sizes inclusive of the supplied argument will assume tab styling, while all screen sizes smaller than the supplied breakpoint will assume accordion styling.
 

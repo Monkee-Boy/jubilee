@@ -4,7 +4,7 @@ Tooltips are used on `:hover` to provide extra information about a piece of text
 
 ## Usage
 
-`@import "/bower_components/jubilee/dist/tooltips/tooltips.css";`
+`@import "/node_modules/mb-jubilee/dist/tooltips/tooltips.css";`
 
 ## Customize
 

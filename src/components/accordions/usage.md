@@ -4,8 +4,8 @@ Accordions display collapsable content. They can be opened and closed by the use
 
 ## Usage
 
-* Import the CSS into your project -> `@import "/bower_components/jubilee/dist/accordions/accordions.css";`.
-* Reference `/bower_components/jubilee/src/components/accordions/accordions.html` for HTML structure.
+* Import the CSS into your project -> `@import "/node_modules/mb-jubilee/dist/accordions/accordions.css";`.
+* Reference `/node_modules/mb-jubilee/src/components/accordions/accordions.html` for HTML structure.
 
 ## Customize
 
